@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--itt hívom meg a javascriptemet-->
+            <script src="js/urlap.js"></script>
+    </head>
+    <body onload="regForm()">
+        <div id="content">
+            <form>
+                <!--itt hibát jelez a minlengthre de ettől függetlenül az oldalon
+                működik-->
+                <input type="text" id="username" name="username"
+                       placeholder="Felhasználónév" size="30" 
+                       minlength=8 maxlength=25 onblur="userCheck()"
+                       required>
+                <span id="userNameError"></span>
+                <br>
+                <!--így lehet kommentelni html-ben-->
+                <input type="password" id="password" name="password"
+                       placeholder="Jelszó" required>
+                <br>
+                <input type="password" id="passwordAgain" name="passwordAgain"
+                       placeholder="A jelszó mégegyszer" required>
+                <br>
+                <input type="email" name="email" id="email" placeholder="E-mail cím"
+                       required>
+                <br>
+                <input type="date" name="birthdate" id="birthdate" min="1900-01-01"
+                       max="2019-01-01">
+                <br><label>Nő</label>
+                <input type="radio" name="gender" id="Wgender" value="no">
+                <br>
+                <label>Férfi</label>
+                <input type="radio" name="gender" id="Mgender" value="ferfi">
+                <br>
+                <input type="number" min="1000" max="9999" name="zipcode" id="zipcode"
+                       placeholder="Irányítószám" required>
+                <br>
+                <label>A felhasználási feltételeket elfogadom</label>
+                <input type="checkbox" name="elfogad" id="elfogad" required>
+                <br>
+                <input type="submit" value="Regisztráció" onclick="userCheck2(form)"
+                       style="height:50px; width:125px;" > 
+                
+            </form>
+           
+            
+            
+        </div>
+    </body>
+</html>
